@@ -1,3 +1,5 @@
+Udacity Data Engineer Project 1
+
 Purpose :
 
 Build an ETL pipeline for Sparkify to process their song and log data collected from users so that the data could be used for next-step analysis. The data were stored in PostgreSQL, in the database named sparkify. 
