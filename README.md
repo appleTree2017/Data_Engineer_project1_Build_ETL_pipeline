@@ -126,7 +126,7 @@ DO NOTHING``
 
 
 ### Database is  organized with star schema:
-<img src="sparkify_star_schema1.png" hight=200 weight=200 />
+<img src="sparkify_star_schema.PNG" hight=200 weight=200 />
 
 
 ## Files inuded in the ETL pipeline:
