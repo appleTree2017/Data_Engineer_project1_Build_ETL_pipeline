@@ -145,31 +145,31 @@ DO NOTHING``
     
 <b>main()</b>
 
-    Connects postgreSQL database, and calls the process_data() function. Parameters are passed to the process_data() function, including the database connection and cursor, the path to the data files and a data handling function (process_song_file () function or process_log_file () function). 
+   Connects postgreSQL database, and calls the process_data() function. Parameters are passed to the process_data() function, including the database connection and cursor, the path to the data files and a data handling function (process_song_file () function or process_log_file () function). 
         
-    When data processing finished, this function will close the database connection.
+   When data processing finished, this function will close the database connection.
 
 <b>process_data(cur, conn, filepath, func)</b>
 
-    After being called by main function,this function checks the locations (folders) where the files locate,and generates a list containing paths to all the files. This function then iterate over the files and call the data handling functon (the parameter func) for next step process.
+   After being called by main function,this function checks the locations (folders) where the files locate,and generates a list containing paths to all the files. This function then iterate over the files and call the data handling functon (the parameter func) for next step process.
 
-    To call the data handleing function, two parameter were passed: database cursor and filepath.
+   To call the data handleing function, two parameter were passed: database cursor and filepath.
 
 
 <b>process_song_file(cur, filepath)</b>
 
-    After being called by the process_data function, this function loads song files into dataframe and inserts records into database:
+   After being called by the process_data function, this function loads song files into dataframe and inserts records into database:
         
-        song data to songs table;
-        artist data into the artist table.
+     song data to songs table;
+     artist data into the artist table.
 
 <b>process_log_file(cur, filepath)</b>
 
-    After being called by the process_data function, this function loads log files into dataframe,filters and formats the records, and inserts records into database:
+   After being called by the process_data function, this function loads log files into dataframe,filters and formats the records, and inserts records into database:
         
-        time data to the time table;
-        user data into the users table;
-        songplay  records to the song play table.
+      time data to the time table;
+      user data into the users table;
+      songplay  records to the song play table.
 
 <b>7. test.ipynb:</b> checks if the ETL pipline works sucessfully.
 
